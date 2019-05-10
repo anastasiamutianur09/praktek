@@ -1,0 +1,15 @@
+<?php
+
+	include_once("koneksi.php");
+
+	$kode_prov=$_POST["kode_provinsi"];
+	$kode_kab=$_POST["kode_kab"];
+	$nama_kab=$_POST["nama_kab"];
+
+	$sql="insert into kabupaten values('$kode_prov','$kode_kab','$nama_kab')";
+	$query=mysqli_query($koneksi,$sql);
+	if($query){
+	header('location:kabupaten.php');
+}
+?>
+	
